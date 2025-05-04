@@ -9,8 +9,8 @@ bot_start_time = datetime.now()
 attack_in_progress = False
 current_attack = None
 attack_history = [] 
-TELEGRAM_BOT_TOKEN = '7520785773:AAG-eVjUU0asss_QpuX-ngeohrvNAhdzCRE'
-ADMIN_USER_IDS = {6114033856, 1807014348, 1866961136}  # Updated to multiple admin IDs
+TELEGRAM_BOT_TOKEN = '7520785773:AAGdQ_FWbllgmzUKBk3hiRoXl1m8nlrE0Pc'
+ADMIN_USER_IDS = {6114033856, 6155412817}  # admin IDs
 MONGO_URI = "mongodb+srv://Bishal:Bishal@bishal.dffybpx.mongodb.net/?retryWrites=true&w=majority&appName=Bishal"
 DB_NAME = "zoya"
 COLLECTION_NAME = "users"
@@ -64,7 +64,7 @@ async def soul(update: Update, context: CallbackContext):
         return
 
     if len(args) != 3:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Incorrect usage! Use: /GODOFCONFIG <add|rem> <user_id> <coins>*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Incorrect usage! Use: /soul <add|rem> <user_id> <coins>*", parse_mode='Markdown')
         return
 
     command, target_user_id, coins = args
