@@ -9,14 +9,14 @@ bot_start_time = datetime.now()
 attack_in_progress = False
 current_attack = None
 attack_history = [] 
-TELEGRAM_BOT_TOKEN = '7520785773:AAFOYgmjb55udB9CYjVer3fKsPrKHhUhwP8'
-ADMIN_USER_IDS = {6114033856, 6155412817}  # admin IDs
+TELEGRAM_BOT_TOKEN = '7317769371:AAEbHrJPs5A45V5KP7yjBshbxUQbn3W4-CE'
+ADMIN_USER_IDS = {6114033856, 521756472}  # admin IDs
 MONGO_URI = "mongodb+srv://Bishal:Bishal@bishal.dffybpx.mongodb.net/?retryWrites=true&w=majority&appName=Bishal"
 DB_NAME = "zoya"
 COLLECTION_NAME = "users"
-ATTACK_TIME_LIMIT = 240
+ATTACK_TIME_LIMIT = 300
 COINS_REQUIRED_PER_ATTACK = 5 
-ATTACK_COOLDOWN = 240
+ATTACK_COOLDOWN = 300
 
 threads = 900
 
@@ -51,7 +51,7 @@ async def start(update: Update, context: CallbackContext):
         "*⚠️ How to Use: ⚠️*\n"
         "*Utilize the commands and type /help for a complete list of commands.*\n\n"
         "*💬 Queries or Issues? 💬*\n"
-        "*Contact Admin: @NOMORE231*"
+        "*Contact Admin: @FLAME1969 , @NOMORE231*"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -106,7 +106,7 @@ async def attack(update: Update, context: CallbackContext):
     if user["coins"] < COINS_REQUIRED_PER_ATTACK:
         await context.bot.send_message(
             chat_id=chat_id,
-            text="*💰 Insufficient coins! Please contact the admin to acquire more coins. DM: @NOMORE231*",
+            text="*💰 Insufficient coins! Please contact the admin to acquire more coins. DM: @FLAME1969 , @NOMORE231*",
             parse_mode='Markdown'
         )
         return
@@ -258,7 +258,7 @@ async def help(update: Update, context: CallbackContext):
         "   - *You're already using this command! It explains all the bot's features.*\n\n"
         "🚨 *Important Tips:* 🚨\n"
         "- *If the bot doesn't reply, it means another user is attacking. Please wait.*\n"
-        "- *If you encounter any issues, contact the admin: @NOMORE231*\n\n"
+        "- *If you encounter any issues, contact the admin: @FLAME1969 , @NOMORE231*\n\n"
         "💥 *Now go and start your hacking adventures!* 💥"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
